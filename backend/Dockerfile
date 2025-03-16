@@ -4,6 +4,6 @@ WORKDIR /opt/backend
 COPY package.json .
 COPY *.js .
 RUN npm install
-# ENV DB_HOST="mysql"   when we use network as host
-ENV DB_HOST="localhost"        
+ENV DB_HOST="mysql"   
+# ENV DB_HOST="localhost"    --when we use network as host    
 CMD ["node", "index.js"]
